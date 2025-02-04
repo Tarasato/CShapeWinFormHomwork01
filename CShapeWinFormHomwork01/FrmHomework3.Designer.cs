@@ -34,10 +34,10 @@
             this.lbAmoutPeople = new System.Windows.Forms.Label();
             this.tbAmountMoney = new System.Windows.Forms.TextBox();
             this.lbAmountMoney = new System.Windows.Forms.Label();
-            this.btClose = new System.Windows.Forms.Button();
+            this.btExit = new System.Windows.Forms.Button();
             this.btCal = new System.Windows.Forms.Button();
             this.lbDivideby = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbResult = new System.Windows.Forms.Label();
             this.lbBaht = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.tbAmountPeople.Name = "tbAmountPeople";
             this.tbAmountPeople.Size = new System.Drawing.Size(186, 20);
             this.tbAmountPeople.TabIndex = 7;
+            this.tbAmountPeople.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmountPeople_KeyPress);
             // 
             // lbAmoutPeople
             // 
@@ -75,6 +76,7 @@
             this.tbAmountMoney.Name = "tbAmountMoney";
             this.tbAmountMoney.Size = new System.Drawing.Size(186, 20);
             this.tbAmountMoney.TabIndex = 5;
+            this.tbAmountMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmountMoney_KeyPress);
             // 
             // lbAmountMoney
             // 
@@ -85,22 +87,22 @@
             this.lbAmountMoney.Size = new System.Drawing.Size(108, 15);
             this.lbAmountMoney.TabIndex = 4;
             this.lbAmountMoney.Text = "จำนวนเงินที่จะหาร";
-            this.lbAmountMoney.Click += new System.EventHandler(this.lbAmountMoney_Click);
             // 
-            // btClose
+            // btExit
             // 
-            this.btClose.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btClose.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btClose.Image = global::CShapeWinFormHomwork01.Properties.Resources.exit3;
-            this.btClose.Location = new System.Drawing.Point(305, 158);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(82, 78);
-            this.btClose.TabIndex = 10;
-            this.btClose.Text = "ปิดหน้าจอ";
-            this.btClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btClose.UseVisualStyleBackColor = false;
+            this.btExit.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btExit.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btExit.Image = global::CShapeWinFormHomwork01.Properties.Resources.exit3;
+            this.btExit.Location = new System.Drawing.Point(305, 158);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(82, 78);
+            this.btExit.TabIndex = 10;
+            this.btExit.Text = "ปิดหน้าจอ";
+            this.btExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // btCal
             // 
@@ -116,6 +118,7 @@
             this.btCal.Text = "คำนวณ";
             this.btCal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btCal.UseVisualStyleBackColor = false;
+            this.btCal.Click += new System.EventHandler(this.btCal_Click);
             // 
             // lbDivideby
             // 
@@ -127,17 +130,17 @@
             this.lbDivideby.TabIndex = 11;
             this.lbDivideby.Text = "หารคนละ";
             // 
-            // label2
+            // lbResult
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(195, 269);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 58);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "XX.XX";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.lbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbResult.ForeColor = System.Drawing.Color.Red;
+            this.lbResult.Location = new System.Drawing.Point(195, 269);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(192, 58);
+            this.lbResult.TabIndex = 12;
+            this.lbResult.Text = "XX.XX";
+            this.lbResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbBaht
             // 
@@ -155,9 +158,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 445);
             this.Controls.Add(this.lbBaht);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbResult);
             this.Controls.Add(this.lbDivideby);
-            this.Controls.Add(this.btClose);
+            this.Controls.Add(this.btExit);
             this.Controls.Add(this.btCal);
             this.Controls.Add(this.tbAmountPeople);
             this.Controls.Add(this.lbAmoutPeople);
@@ -166,9 +169,12 @@
             this.Controls.Add(this.lbHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmHomework3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "โปรแกรมการบัาน3";
-            this.Load += new System.EventHandler(this.FrmHomework3_Load);
+            this.Click += new System.EventHandler(this.FrmHomework3_Click);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmHomework3_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,10 +187,10 @@
         private System.Windows.Forms.Label lbAmoutPeople;
         private System.Windows.Forms.TextBox tbAmountMoney;
         private System.Windows.Forms.Label lbAmountMoney;
-        private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Button btCal;
         private System.Windows.Forms.Label lbDivideby;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbResult;
         private System.Windows.Forms.Label lbBaht;
     }
 }

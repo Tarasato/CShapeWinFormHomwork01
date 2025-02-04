@@ -33,7 +33,7 @@
             this.lbTest = new System.Windows.Forms.Label();
             this.lbFinal = new System.Windows.Forms.Label();
             this.lbMidterm = new System.Windows.Forms.Label();
-            this.tbTest = new System.Windows.Forms.TextBox();
+            this.tbScore = new System.Windows.Forms.TextBox();
             this.tbFinal = new System.Windows.Forms.TextBox();
             this.tbMidterm = new System.Windows.Forms.TextBox();
             this.tbFullname = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             this.lbPointTotal = new System.Windows.Forms.Label();
             this.lbIdResult = new System.Windows.Forms.Label();
             this.lbFullnameResult = new System.Windows.Forms.Label();
-            this.lbPointTotalResult = new System.Windows.Forms.Label();
+            this.lbTotalScore = new System.Windows.Forms.Label();
             this.lbHead = new System.Windows.Forms.Label();
             this.btClose = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.gbStuData.Controls.Add(this.lbTest);
             this.gbStuData.Controls.Add(this.lbFinal);
             this.gbStuData.Controls.Add(this.lbMidterm);
-            this.gbStuData.Controls.Add(this.tbTest);
+            this.gbStuData.Controls.Add(this.tbScore);
             this.gbStuData.Controls.Add(this.tbFinal);
             this.gbStuData.Controls.Add(this.tbMidterm);
             this.gbStuData.Controls.Add(this.tbFullname);
@@ -92,7 +92,6 @@
             this.lbFinal.Size = new System.Drawing.Size(99, 15);
             this.lbFinal.TabIndex = 8;
             this.lbFinal.Text = "คะแนนปลายภาค";
-            this.lbFinal.Click += new System.EventHandler(this.lbFinal_Click);
             // 
             // lbMidterm
             // 
@@ -103,12 +102,13 @@
             this.lbMidterm.TabIndex = 7;
             this.lbMidterm.Text = "คะแนนกลางภาค";
             // 
-            // tbTest
+            // tbScore
             // 
-            this.tbTest.Location = new System.Drawing.Point(153, 191);
-            this.tbTest.Name = "tbTest";
-            this.tbTest.Size = new System.Drawing.Size(186, 21);
-            this.tbTest.TabIndex = 6;
+            this.tbScore.Location = new System.Drawing.Point(153, 191);
+            this.tbScore.Name = "tbScore";
+            this.tbScore.Size = new System.Drawing.Size(186, 21);
+            this.tbScore.TabIndex = 6;
+            this.tbScore.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMidterm_KeyPress);
             // 
             // tbFinal
             // 
@@ -116,6 +116,7 @@
             this.tbFinal.Name = "tbFinal";
             this.tbFinal.Size = new System.Drawing.Size(186, 21);
             this.tbFinal.TabIndex = 5;
+            this.tbFinal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMidterm_KeyPress);
             // 
             // tbMidterm
             // 
@@ -123,6 +124,7 @@
             this.tbMidterm.Name = "tbMidterm";
             this.tbMidterm.Size = new System.Drawing.Size(186, 21);
             this.tbMidterm.TabIndex = 4;
+            this.tbMidterm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMidterm_KeyPress);
             // 
             // tbFullname
             // 
@@ -130,6 +132,7 @@
             this.tbFullname.Name = "tbFullname";
             this.tbFullname.Size = new System.Drawing.Size(186, 21);
             this.tbFullname.TabIndex = 3;
+            this.tbFullname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFullname_KeyPress);
             // 
             // lbFullname
             // 
@@ -146,6 +149,7 @@
             this.tbIdStu.Name = "tbIdStu";
             this.tbIdStu.Size = new System.Drawing.Size(186, 21);
             this.tbIdStu.TabIndex = 1;
+            this.tbIdStu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdStu_KeyPress);
             // 
             // lbIdStu
             // 
@@ -155,7 +159,6 @@
             this.lbIdStu.Size = new System.Drawing.Size(78, 15);
             this.lbIdStu.TabIndex = 0;
             this.lbIdStu.Text = "รหัสนักศึกษา";
-            this.lbIdStu.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbIdStu2
             // 
@@ -186,7 +189,6 @@
             this.lbPointTotal.Size = new System.Drawing.Size(70, 15);
             this.lbPointTotal.TabIndex = 6;
             this.lbPointTotal.Text = "คะแนนรวม";
-            this.lbPointTotal.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lbIdResult
             // 
@@ -212,17 +214,17 @@
             this.lbFullnameResult.Text = "XXXXXXXX";
             this.lbFullnameResult.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbPointTotalResult
+            // lbTotalScore
             // 
-            this.lbPointTotalResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.lbPointTotalResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbPointTotalResult.ForeColor = System.Drawing.Color.Green;
-            this.lbPointTotalResult.Location = new System.Drawing.Point(196, 475);
-            this.lbPointTotalResult.Name = "lbPointTotalResult";
-            this.lbPointTotalResult.Size = new System.Drawing.Size(219, 23);
-            this.lbPointTotalResult.TabIndex = 11;
-            this.lbPointTotalResult.Text = "XXXXXXXX";
-            this.lbPointTotalResult.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbTotalScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.lbTotalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbTotalScore.ForeColor = System.Drawing.Color.Green;
+            this.lbTotalScore.Location = new System.Drawing.Point(196, 475);
+            this.lbTotalScore.Name = "lbTotalScore";
+            this.lbTotalScore.Size = new System.Drawing.Size(219, 23);
+            this.lbTotalScore.TabIndex = 11;
+            this.lbTotalScore.Text = "XXXXXXXX";
+            this.lbTotalScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbHead
             // 
@@ -242,6 +244,7 @@
             this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btClose.Image = global::CShapeWinFormHomwork01.Properties.Resources.exit3;
+            this.btClose.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btClose.Location = new System.Drawing.Point(346, 312);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(82, 78);
@@ -249,6 +252,7 @@
             this.btClose.Text = "ปิดหน้าจอ";
             this.btClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // btCancel
             // 
@@ -257,6 +261,7 @@
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btCancel.Image = global::CShapeWinFormHomwork01.Properties.Resources.cancel;
+            this.btCancel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btCancel.Location = new System.Drawing.Point(213, 312);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(82, 78);
@@ -264,6 +269,7 @@
             this.btCancel.Text = "ยกเลิก";
             this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btCal
             // 
@@ -272,6 +278,7 @@
             this.btCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btCal.Image = global::CShapeWinFormHomwork01.Properties.Resources.calculator2;
+            this.btCal.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btCal.Location = new System.Drawing.Point(80, 312);
             this.btCal.Name = "btCal";
             this.btCal.Size = new System.Drawing.Size(82, 78);
@@ -279,6 +286,7 @@
             this.btCal.Text = "คำนวณ";
             this.btCal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btCal.UseVisualStyleBackColor = false;
+            this.btCal.Click += new System.EventHandler(this.btCal_Click);
             // 
             // lbGradeResult
             // 
@@ -306,11 +314,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 602);
+            this.ClientSize = new System.Drawing.Size(502, 602);
             this.Controls.Add(this.lbGradeResult);
             this.Controls.Add(this.lbGrade);
             this.Controls.Add(this.lbHead);
-            this.Controls.Add(this.lbPointTotalResult);
+            this.Controls.Add(this.lbTotalScore);
             this.Controls.Add(this.lbFullnameResult);
             this.Controls.Add(this.lbIdResult);
             this.Controls.Add(this.lbPointTotal);
@@ -322,10 +330,13 @@
             this.Controls.Add(this.gbStuData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmHomework2";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "โปรแกรมการบัาน2";
-            this.Load += new System.EventHandler(this.FrmHomework2_Load);
+            this.Click += new System.EventHandler(this.FrmHomework2_Click);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmHomework2_KeyPress);
             this.gbStuData.ResumeLayout(false);
             this.gbStuData.PerformLayout();
             this.ResumeLayout(false);
@@ -342,7 +353,7 @@
         private System.Windows.Forms.Label lbTest;
         private System.Windows.Forms.Label lbFinal;
         private System.Windows.Forms.Label lbMidterm;
-        private System.Windows.Forms.TextBox tbTest;
+        private System.Windows.Forms.TextBox tbScore;
         private System.Windows.Forms.TextBox tbFinal;
         private System.Windows.Forms.TextBox tbMidterm;
         private System.Windows.Forms.TextBox tbFullname;
@@ -354,7 +365,7 @@
         private System.Windows.Forms.Label lbPointTotal;
         private System.Windows.Forms.Label lbIdResult;
         private System.Windows.Forms.Label lbFullnameResult;
-        private System.Windows.Forms.Label lbPointTotalResult;
+        private System.Windows.Forms.Label lbTotalScore;
         private System.Windows.Forms.Label lbHead;
         private System.Windows.Forms.Label lbGradeResult;
         private System.Windows.Forms.Label lbGrade;

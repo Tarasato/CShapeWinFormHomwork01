@@ -54,7 +54,6 @@
             this.lbHead.Size = new System.Drawing.Size(212, 31);
             this.lbHead.TabIndex = 0;
             this.lbHead.Text = "Month Program";
-            this.lbHead.Click += new System.EventHandler(this.label1_Click);
             // 
             // btMonth1
             // 
@@ -69,6 +68,7 @@
             this.btMonth1.TabIndex = 1;
             this.btMonth1.Text = "เดือน1";
             this.btMonth1.UseVisualStyleBackColor = false;
+            this.btMonth1.Click += new System.EventHandler(this.btMonth1_Click);
             // 
             // btMonth2
             // 
@@ -83,6 +83,7 @@
             this.btMonth2.TabIndex = 2;
             this.btMonth2.Text = "เดือน2";
             this.btMonth2.UseVisualStyleBackColor = false;
+            this.btMonth2.Click += new System.EventHandler(this.btMonth2_Click);
             // 
             // btMonth3
             // 
@@ -97,6 +98,7 @@
             this.btMonth3.TabIndex = 3;
             this.btMonth3.Text = "เดือน3";
             this.btMonth3.UseVisualStyleBackColor = false;
+            this.btMonth3.Click += new System.EventHandler(this.btMonth3_Click);
             // 
             // btMonth4
             // 
@@ -126,6 +128,7 @@
             this.btMonth5.TabIndex = 5;
             this.btMonth5.Text = "เดือน5";
             this.btMonth5.UseVisualStyleBackColor = false;
+            this.btMonth5.Click += new System.EventHandler(this.btMonth5_Click);
             // 
             // btMonth6
             // 
@@ -140,6 +143,7 @@
             this.btMonth6.TabIndex = 6;
             this.btMonth6.Text = "เดือน6";
             this.btMonth6.UseVisualStyleBackColor = false;
+            this.btMonth6.Click += new System.EventHandler(this.btMonth6_Click);
             // 
             // btMonth7
             // 
@@ -154,6 +158,7 @@
             this.btMonth7.TabIndex = 7;
             this.btMonth7.Text = "เดือน7";
             this.btMonth7.UseVisualStyleBackColor = false;
+            this.btMonth7.Click += new System.EventHandler(this.btMonth7_Click);
             // 
             // btMonth8
             // 
@@ -168,6 +173,7 @@
             this.btMonth8.TabIndex = 8;
             this.btMonth8.Text = "เดือน8";
             this.btMonth8.UseVisualStyleBackColor = false;
+            this.btMonth8.Click += new System.EventHandler(this.btMonth8_Click);
             // 
             // btMonth9
             // 
@@ -182,6 +188,7 @@
             this.btMonth9.TabIndex = 9;
             this.btMonth9.Text = "เดือน9";
             this.btMonth9.UseVisualStyleBackColor = false;
+            this.btMonth9.Click += new System.EventHandler(this.btMonth9_Click);
             // 
             // btMonth10
             // 
@@ -196,6 +203,7 @@
             this.btMonth10.TabIndex = 10;
             this.btMonth10.Text = "เดือน10";
             this.btMonth10.UseVisualStyleBackColor = false;
+            this.btMonth10.Click += new System.EventHandler(this.btMonth10_Click);
             // 
             // btMonth11
             // 
@@ -210,6 +218,7 @@
             this.btMonth11.TabIndex = 11;
             this.btMonth11.Text = "เดือน11";
             this.btMonth11.UseVisualStyleBackColor = false;
+            this.btMonth11.Click += new System.EventHandler(this.btMonth11_Click);
             // 
             // btMonth12
             // 
@@ -224,6 +233,7 @@
             this.btMonth12.TabIndex = 12;
             this.btMonth12.Text = "เดือน12";
             this.btMonth12.UseVisualStyleBackColor = false;
+            this.btMonth12.Click += new System.EventHandler(this.btMonth12_Click);
             // 
             // FrmHomework1
             // 
@@ -245,8 +255,11 @@
             this.Controls.Add(this.lbHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmHomework1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "โปรแกรมการบัาน1  ";
+            this.Load += new System.EventHandler(this.FrmHomework1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

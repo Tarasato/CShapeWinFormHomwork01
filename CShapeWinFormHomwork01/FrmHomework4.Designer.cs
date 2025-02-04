@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHomework4));
             this.lbHead = new System.Windows.Forms.Label();
-            this.rdJAVA = new System.Windows.Forms.RadioButton();
-            this.rdAndroid = new System.Windows.Forms.RadioButton();
-            this.rdiOS = new System.Windows.Forms.RadioButton();
-            this.rdPHP = new System.Windows.Forms.RadioButton();
+            this.rbJAVA = new System.Windows.Forms.RadioButton();
+            this.rbAndroid = new System.Windows.Forms.RadioButton();
+            this.rbiOS = new System.Windows.Forms.RadioButton();
+            this.rbPHP = new System.Windows.Forms.RadioButton();
             this.lbAmountPeople = new System.Windows.Forms.Label();
             this.tbAmountPeople = new System.Windows.Forms.TextBox();
             this.lbPeople = new System.Windows.Forms.Label();
@@ -66,57 +66,51 @@
             this.lbHead.TabIndex = 2;
             this.lbHead.Text = "โปรแกรมคำนวณค่าอบรม สัมมนา";
             // 
-            // rdJAVA
+            // rbJAVA
             // 
-            this.rdJAVA.AutoSize = true;
-            this.rdJAVA.Checked = true;
-            this.rdJAVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.rdJAVA.Location = new System.Drawing.Point(109, 82);
-            this.rdJAVA.Name = "rdJAVA";
-            this.rdJAVA.Size = new System.Drawing.Size(233, 19);
-            this.rdJAVA.TabIndex = 3;
-            this.rdJAVA.TabStop = true;
-            this.rdJAVA.Text = "อบรม JAVA Developer (คนละ 1,000 บาท)";
-            this.rdJAVA.UseVisualStyleBackColor = true;
+            this.rbJAVA.AutoSize = true;
+            this.rbJAVA.Checked = true;
+            this.rbJAVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.rbJAVA.Location = new System.Drawing.Point(109, 82);
+            this.rbJAVA.Name = "rbJAVA";
+            this.rbJAVA.Size = new System.Drawing.Size(233, 19);
+            this.rbJAVA.TabIndex = 3;
+            this.rbJAVA.TabStop = true;
+            this.rbJAVA.Text = "อบรม JAVA Developer (คนละ 1,000 บาท)";
+            this.rbJAVA.UseVisualStyleBackColor = true;
             // 
-            // rdAndroid
+            // rbAndroid
             // 
-            this.rdAndroid.AutoSize = true;
-            this.rdAndroid.Checked = true;
-            this.rdAndroid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.rdAndroid.Location = new System.Drawing.Point(109, 107);
-            this.rdAndroid.Name = "rdAndroid";
-            this.rdAndroid.Size = new System.Drawing.Size(248, 19);
-            this.rdAndroid.TabIndex = 4;
-            this.rdAndroid.TabStop = true;
-            this.rdAndroid.Text = "อบรม Android Developer (คนละ 1,200 บาท)";
-            this.rdAndroid.UseVisualStyleBackColor = true;
+            this.rbAndroid.AutoSize = true;
+            this.rbAndroid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.rbAndroid.Location = new System.Drawing.Point(109, 107);
+            this.rbAndroid.Name = "rbAndroid";
+            this.rbAndroid.Size = new System.Drawing.Size(248, 19);
+            this.rbAndroid.TabIndex = 4;
+            this.rbAndroid.Text = "อบรม Android Developer (คนละ 1,200 บาท)";
+            this.rbAndroid.UseVisualStyleBackColor = true;
             // 
-            // rdiOS
+            // rbiOS
             // 
-            this.rdiOS.AutoSize = true;
-            this.rdiOS.Checked = true;
-            this.rdiOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.rdiOS.Location = new System.Drawing.Point(109, 132);
-            this.rdiOS.Name = "rdiOS";
-            this.rdiOS.Size = new System.Drawing.Size(226, 19);
-            this.rdiOS.TabIndex = 5;
-            this.rdiOS.TabStop = true;
-            this.rdiOS.Text = "อบรม iOS Developer (คนละ 1,400 บาท)";
-            this.rdiOS.UseVisualStyleBackColor = true;
+            this.rbiOS.AutoSize = true;
+            this.rbiOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.rbiOS.Location = new System.Drawing.Point(109, 132);
+            this.rbiOS.Name = "rbiOS";
+            this.rbiOS.Size = new System.Drawing.Size(226, 19);
+            this.rbiOS.TabIndex = 5;
+            this.rbiOS.Text = "อบรม iOS Developer (คนละ 1,400 บาท)";
+            this.rbiOS.UseVisualStyleBackColor = true;
             // 
-            // rdPHP
+            // rbPHP
             // 
-            this.rdPHP.AutoSize = true;
-            this.rdPHP.Checked = true;
-            this.rdPHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.rdPHP.Location = new System.Drawing.Point(109, 157);
-            this.rdPHP.Name = "rdPHP";
-            this.rdPHP.Size = new System.Drawing.Size(231, 19);
-            this.rdPHP.TabIndex = 6;
-            this.rdPHP.TabStop = true;
-            this.rdPHP.Text = "อบรม PHP Developer (คนละ 1,600 บาท)";
-            this.rdPHP.UseVisualStyleBackColor = true;
+            this.rbPHP.AutoSize = true;
+            this.rbPHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.rbPHP.Location = new System.Drawing.Point(109, 157);
+            this.rbPHP.Name = "rbPHP";
+            this.rbPHP.Size = new System.Drawing.Size(231, 19);
+            this.rbPHP.TabIndex = 6;
+            this.rbPHP.Text = "อบรม PHP Developer (คนละ 1,600 บาท)";
+            this.rbPHP.UseVisualStyleBackColor = true;
             // 
             // lbAmountPeople
             // 
@@ -134,6 +128,7 @@
             this.tbAmountPeople.Name = "tbAmountPeople";
             this.tbAmountPeople.Size = new System.Drawing.Size(134, 20);
             this.tbAmountPeople.TabIndex = 8;
+            this.tbAmountPeople.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAmountPeople_KeyPress);
             // 
             // lbPeople
             // 
@@ -189,6 +184,7 @@
             this.btClose.Text = "ปิดหน้าจอ";
             this.btClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // btCancel
             // 
@@ -204,6 +200,7 @@
             this.btCancel.Text = "ยกเลิก";
             this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btCal
             // 
@@ -219,6 +216,7 @@
             this.btCal.Text = "คำนวณ";
             this.btCal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btCal.UseVisualStyleBackColor = false;
+            this.btCal.Click += new System.EventHandler(this.btCal_Click);
             // 
             // panel1
             // 
@@ -237,14 +235,14 @@
             // 
             // lbTotalCostResult
             // 
-            this.lbTotalCostResult.AutoSize = true;
             this.lbTotalCostResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbTotalCostResult.ForeColor = System.Drawing.Color.Red;
-            this.lbTotalCostResult.Location = new System.Drawing.Point(130, 290);
+            this.lbTotalCostResult.Location = new System.Drawing.Point(87, 287);
             this.lbTotalCostResult.Name = "lbTotalCostResult";
-            this.lbTotalCostResult.Size = new System.Drawing.Size(55, 24);
+            this.lbTotalCostResult.Size = new System.Drawing.Size(129, 24);
             this.lbTotalCostResult.TabIndex = 27;
             this.lbTotalCostResult.Text = "XXX";
+            this.lbTotalCostResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbTotalCost
             // 
@@ -258,14 +256,14 @@
             // 
             // lbAmountResult
             // 
-            this.lbAmountResult.AutoSize = true;
             this.lbAmountResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbAmountResult.ForeColor = System.Drawing.Color.Red;
-            this.lbAmountResult.Location = new System.Drawing.Point(129, 197);
+            this.lbAmountResult.Location = new System.Drawing.Point(87, 193);
             this.lbAmountResult.Name = "lbAmountResult";
-            this.lbAmountResult.Size = new System.Drawing.Size(55, 24);
+            this.lbAmountResult.Size = new System.Drawing.Size(129, 24);
             this.lbAmountResult.TabIndex = 25;
             this.lbAmountResult.Text = "XXX";
+            this.lbAmountResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbAmountPeople2
             // 
@@ -279,14 +277,14 @@
             // 
             // lbTopicResult
             // 
-            this.lbTopicResult.AutoSize = true;
             this.lbTopicResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbTopicResult.ForeColor = System.Drawing.Color.Red;
-            this.lbTopicResult.Location = new System.Drawing.Point(129, 116);
+            this.lbTopicResult.Location = new System.Drawing.Point(47, 113);
             this.lbTopicResult.Name = "lbTopicResult";
-            this.lbTopicResult.Size = new System.Drawing.Size(55, 24);
+            this.lbTopicResult.Size = new System.Drawing.Size(203, 24);
             this.lbTopicResult.TabIndex = 23;
             this.lbTopicResult.Text = "XXX";
+            this.lbTopicResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbTopic
             // 
@@ -313,7 +311,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 476);
+            this.ClientSize = new System.Drawing.Size(800, 434);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.btCancel);
@@ -322,15 +320,20 @@
             this.Controls.Add(this.lbPeople);
             this.Controls.Add(this.tbAmountPeople);
             this.Controls.Add(this.lbAmountPeople);
-            this.Controls.Add(this.rdPHP);
-            this.Controls.Add(this.rdiOS);
-            this.Controls.Add(this.rdAndroid);
-            this.Controls.Add(this.rdJAVA);
+            this.Controls.Add(this.rbPHP);
+            this.Controls.Add(this.rbiOS);
+            this.Controls.Add(this.rbAndroid);
+            this.Controls.Add(this.rbJAVA);
             this.Controls.Add(this.lbHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmHomework4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "โปรแกรมการบัาน4";
+            this.Load += new System.EventHandler(this.FrmHomework4_Load);
+            this.Click += new System.EventHandler(this.FrmHomework4_Click);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmHomework4_KeyPress);
             this.gbNote.ResumeLayout(false);
             this.gbNote.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -343,10 +346,10 @@
         #endregion
 
         private System.Windows.Forms.Label lbHead;
-        private System.Windows.Forms.RadioButton rdJAVA;
-        private System.Windows.Forms.RadioButton rdAndroid;
-        private System.Windows.Forms.RadioButton rdiOS;
-        private System.Windows.Forms.RadioButton rdPHP;
+        private System.Windows.Forms.RadioButton rbJAVA;
+        private System.Windows.Forms.RadioButton rbAndroid;
+        private System.Windows.Forms.RadioButton rbiOS;
+        private System.Windows.Forms.RadioButton rbPHP;
         private System.Windows.Forms.Label lbAmountPeople;
         private System.Windows.Forms.TextBox tbAmountPeople;
         private System.Windows.Forms.Label lbPeople;
